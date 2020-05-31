@@ -94353,7 +94353,10 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
 
   _exports.default = Router;
   Router.map(function () {
-    this.route('options');
+    this.route("options");
+    this.route("not-found", {
+      path: "*"
+    });
   });
 });
 ;define("chrome-extension/routes/options", ["exports"], function (_exports) {
@@ -94433,6 +94436,24 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
     "block": "{\"symbols\":[],\"statements\":[[1,[30,[36,1],[[30,[36,0],null,null]],null]]],\"hasEval\":false,\"upvars\":[\"-outlet\",\"component\"]}",
     "meta": {
       "moduleName": "chrome-extension/templates/application.hbs"
+    }
+  });
+
+  _exports.default = _default;
+});
+;define("chrome-extension/templates/not-found", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _default = Ember.HTMLBars.template({
+    "id": "qIaoPDW6",
+    "block": "{\"symbols\":[],\"statements\":[[10,\"h1\"],[12],[2,\"Route not found!\"],[13]],\"hasEval\":false,\"upvars\":[]}",
+    "meta": {
+      "moduleName": "chrome-extension/templates/not-found.hbs"
     }
   });
 
