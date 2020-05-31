@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Where are we booting the app from -->
+    <meta scope="ember-app-from" content="popup" />
+    <title>Chrome Extension</title>
+    <link rel="stylesheet" href="/assets/app.css" />
+    <style type="text/css">
+      /* Dimensions of the popup window*/
+      body {
+        width: 378px;
+        height: 378px;
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- rootElement -->
+    <div id="chrome-app"></div>
+    <script src="/assets/app.js"></script>
+
+    <script src="/app_booter.js"></script>
+  </body>
+</html>
