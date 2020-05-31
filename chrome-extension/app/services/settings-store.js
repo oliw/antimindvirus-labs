@@ -4,14 +4,17 @@ import { inject as service } from "@ember/service";
 const SETTINGS_KEY = "settings";
 
 const DEFAULT_SETTINGS = {
-  foo: "bar",
+  questionHeadlineFilterer: {
+    enabled: false,
+  },
 };
 
-export default class SettingsService extends Service {
+export default class SettingsStoreService extends Service {
   @service chromeStorage;
 
   async store(settings) {
-    set(SETTINGS_KEY, settings);
+    debugger;
+    return this.chromeStorage.set(SETTINGS_KEY, settings);
   }
 
   async fetch() {

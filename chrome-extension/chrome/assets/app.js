@@ -94101,6 +94101,67 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
     }
   });
 });
+;define("chrome-extension/components/settings", ["exports", "@glimmer/component"], function (_exports, _component) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _dec, _dec2, _class, _descriptor, _temp;
+
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
+  /*
+    <h2>Question Filter Settings</h2>
+  <form>
+      <label for="enabled">Enabled?</label>
+      <Input id="enabled" @type="checkbox" name="enabled"
+          @checked={{this.args.settings.questionHeadlineFilterer.enabled}} />
+      <button type="button" {{on "click" this.save}}>Save</button>
+  </form>
+  {{yield}}
+  */
+  {
+    id: "3MwQusXl",
+    block: "{\"symbols\":[\"&default\"],\"statements\":[[10,\"h2\"],[12],[2,\"Question Filter Settings\"],[13],[2,\"\\n\"],[10,\"form\"],[12],[2,\"\\n    \"],[10,\"label\"],[14,\"for\",\"enabled\"],[12],[2,\"Enabled?\"],[13],[2,\"\\n    \"],[8,\"input\",[[24,1,\"enabled\"],[24,3,\"enabled\"]],[[\"@type\",\"@checked\"],[\"checkbox\",[32,0,[\"args\",\"settings\",\"questionHeadlineFilterer\",\"enabled\"]]]],null],[2,\"\\n    \"],[11,\"button\"],[24,4,\"button\"],[4,[38,0],[\"click\",[32,0,[\"save\"]]],null],[12],[2,\"Save\"],[13],[2,\"\\n\"],[13],[2,\"\\n\"],[18,1,null]],\"hasEval\":false,\"upvars\":[\"on\"]}",
+    meta: {
+      moduleName: "chrome-extension/components/settings.hbs"
+    }
+  });
+
+  let SettingsComponent = (_dec = Ember.inject.service, _dec2 = Ember._action, (_class = (_temp = class SettingsComponent extends _component.default {
+    constructor(...args) {
+      super(...args);
+
+      _initializerDefineProperty(this, "settingsStore", _descriptor, this);
+    }
+
+    save() {
+      const settings = this.args.settings;
+      this.settingsStore.store(settings).then(() => {
+        console.log("Saved!");
+      });
+    }
+
+  }, _temp), (_descriptor = _applyDecoratedDescriptor(_class.prototype, "settingsStore", [_dec], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _applyDecoratedDescriptor(_class.prototype, "save", [_dec2], Object.getOwnPropertyDescriptor(_class.prototype, "save"), _class.prototype)), _class));
+  _exports.default = SettingsComponent;
+
+  Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, SettingsComponent);
+});
 ;define("chrome-extension/components/welcome-page", ["exports", "ember-welcome-page/components/welcome-page"], function (_exports, _welcomePage) {
   "use strict";
 
@@ -94381,17 +94442,17 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
     constructor(...args) {
       super(...args);
 
-      _initializerDefineProperty(this, "settings", _descriptor, this);
+      _initializerDefineProperty(this, "settingsStore", _descriptor, this);
     }
 
     async model() {
-      const settings = await this.settings.fetch();
+      const settings = await this.settingsStore.fetch();
       return {
         settings
       };
     }
 
-  }, _temp), (_descriptor = _applyDecoratedDescriptor(_class.prototype, "settings", [_dec], {
+  }, _temp), (_descriptor = _applyDecoratedDescriptor(_class.prototype, "settingsStore", [_dec], {
     configurable: true,
     enumerable: true,
     writable: true,
@@ -94450,7 +94511,7 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
     async set(key, value) {
       return new Promise((resolve, reject) => {
         chrome.storage.local.set({
-          key: value
+          [key]: value
         }, function () {
           resolve();
         });
@@ -94459,8 +94520,10 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
 
     async get(key) {
       return new Promise((resolve, reject) => {
-        chrome.storage.local.get([key], function (result) {
-          resolve(result.key);
+        chrome.storage.local.get(key, function (result) {
+          console.log(`Looking for ${key}`);
+          console.log(result);
+          resolve(result[key]);
         });
       });
     }
@@ -94469,7 +94532,7 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
 
   _exports.default = ChromeStorageService;
 });
-;define("chrome-extension/services/settings", ["exports"], function (_exports) {
+;define("chrome-extension/services/settings-store", ["exports"], function (_exports) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -94489,9 +94552,11 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
 
   const SETTINGS_KEY = "settings";
   const DEFAULT_SETTINGS = {
-    foo: "bar"
+    questionHeadlineFilterer: {
+      enabled: false
+    }
   };
-  let SettingsService = (_dec = Ember.inject.service, (_class = (_temp = class SettingsService extends Ember.Service {
+  let SettingsStoreService = (_dec = Ember.inject.service, (_class = (_temp = class SettingsStoreService extends Ember.Service {
     constructor(...args) {
       super(...args);
 
@@ -94499,7 +94564,8 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
     }
 
     async store(settings) {
-      set(SETTINGS_KEY, settings);
+      debugger;
+      return this.chromeStorage.set(SETTINGS_KEY, settings);
     }
 
     async fetch() {
@@ -94515,7 +94581,7 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
     writable: true,
     initializer: null
   })), _class));
-  _exports.default = SettingsService;
+  _exports.default = SettingsStoreService;
 });
 ;define("chrome-extension/services/store", ["exports", "ember-data/store"], function (_exports, _store) {
   "use strict";
@@ -94575,8 +94641,8 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "ggE3PyKw",
-    "block": "{\"symbols\":[],\"statements\":[[10,\"h1\"],[12],[2,\"Welcome to the Settings Page!\"],[13],[2,\"\\n\"],[10,\"p\"],[12],[2,\"Foo \"],[1,[32,0,[\"model\",\"settings\",\"foo\"]]],[13],[2,\"\\n\"],[10,\"h2\"],[12],[2,\"Question Filter Settings\"],[13],[2,\"\\n\"],[10,\"form\"],[12],[2,\"\\n    \"],[10,\"label\"],[14,\"for\",\"enabled\"],[12],[2,\"Enabled?\"],[13],[2,\"\\n    \"],[10,\"input\"],[14,1,\"enabled\"],[14,4,\"checkbox\"],[12],[13],[2,\"\\n\"],[13],[2,\"\\n\"],[1,[30,[36,1],[[30,[36,0],null,null]],null]]],\"hasEval\":false,\"upvars\":[\"-outlet\",\"component\"]}",
+    "id": "EJObBPte",
+    "block": "{\"symbols\":[],\"statements\":[[10,\"h1\"],[12],[2,\"Welcome to the Settings Page!\"],[13],[2,\"\\n\"],[8,\"settings\",[],[[\"@settings\"],[[32,0,[\"model\",\"settings\"]]]],null],[2,\"\\n\"],[1,[30,[36,1],[[30,[36,0],null,null]],null]]],\"hasEval\":false,\"upvars\":[\"-outlet\",\"component\"]}",
     "meta": {
       "moduleName": "chrome-extension/templates/options.hbs"
     }

@@ -1,0 +1,8 @@
+<h2>Question Filter Settings</h2>
+<form>
+    <label for="enabled">Enabled?</label>
+    <Input id="enabled" @type="checkbox" name="enabled"
+        @checked={{this.args.settings.questionHeadlineFilterer.enabled}} />
+    <button type="button" {{on "click" this.save}}>Save</button>
+</form>
+{{yield}}
