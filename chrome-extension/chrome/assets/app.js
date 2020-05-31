@@ -93990,9 +93990,9 @@ var __ember_auto_import__ =
 /************************************************************************/
 /******/ ({
 
-/***/ "../../../../../../private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-25836ZvPEDox9R9kK/cache-256-bundler/staging/app.js":
+/***/ "../../../../../../private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-31508xEyjTH4rxanU/cache-256-bundler/staging/app.js":
 /*!****************************************************************************************************************************!*\
-  !*** /private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-25836ZvPEDox9R9kK/cache-256-bundler/staging/app.js ***!
+  !*** /private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-31508xEyjTH4rxanU/cache-256-bundler/staging/app.js ***!
   \****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -94016,9 +94016,9 @@ module.exports = (function(){
 
 /***/ }),
 
-/***/ "../../../../../../private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-25836ZvPEDox9R9kK/cache-256-bundler/staging/l.js":
+/***/ "../../../../../../private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-31508xEyjTH4rxanU/cache-256-bundler/staging/l.js":
 /*!**************************************************************************************************************************!*\
-  !*** /private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-25836ZvPEDox9R9kK/cache-256-bundler/staging/l.js ***!
+  !*** /private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-31508xEyjTH4rxanU/cache-256-bundler/staging/l.js ***!
   \**************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -94032,19 +94032,19 @@ window._eai_d = define;
 
 /***/ 0:
 /*!*****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi /private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-25836ZvPEDox9R9kK/cache-256-bundler/staging/l.js /private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-25836ZvPEDox9R9kK/cache-256-bundler/staging/app.js ***!
+  !*** multi /private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-31508xEyjTH4rxanU/cache-256-bundler/staging/l.js /private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-31508xEyjTH4rxanU/cache-256-bundler/staging/app.js ***!
   \*****************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-25836ZvPEDox9R9kK/cache-256-bundler/staging/l.js */"../../../../../../private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-25836ZvPEDox9R9kK/cache-256-bundler/staging/l.js");
-module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-25836ZvPEDox9R9kK/cache-256-bundler/staging/app.js */"../../../../../../private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-25836ZvPEDox9R9kK/cache-256-bundler/staging/app.js");
+__webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-31508xEyjTH4rxanU/cache-256-bundler/staging/l.js */"../../../../../../private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-31508xEyjTH4rxanU/cache-256-bundler/staging/l.js");
+module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-31508xEyjTH4rxanU/cache-256-bundler/staging/app.js */"../../../../../../private/var/folders/j2/6kcvl_9j569_l1dwd9ckf3q80000gq/T/broccoli-31508xEyjTH4rxanU/cache-256-bundler/staging/app.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=chunk.ab9f18e3dac58412d7fb.js.map
+//# sourceMappingURL=chunk.a808a0eec7b14d829631.js.map
 'use strict';
 
 
@@ -94367,8 +94367,36 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
   });
   _exports.default = void 0;
 
-  class OptionsRoute extends Ember.Route {}
+  var _dec, _class, _descriptor, _temp;
 
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  let OptionsRoute = (_dec = Ember.inject.service, (_class = (_temp = class OptionsRoute extends Ember.Route {
+    constructor(...args) {
+      super(...args);
+
+      _initializerDefineProperty(this, "settings", _descriptor, this);
+    }
+
+    async model() {
+      const settings = await this.settings.fetch();
+      return {
+        settings
+      };
+    }
+
+  }, _temp), (_descriptor = _applyDecoratedDescriptor(_class.prototype, "settings", [_dec], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  })), _class));
   _exports.default = OptionsRoute;
 });
 ;define("chrome-extension/serializers/-default", ["exports", "@ember-data/serializer/json"], function (_exports, _json) {
@@ -94409,6 +94437,85 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
       return _rest.default;
     }
   });
+});
+;define("chrome-extension/services/chrome-storage", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  class ChromeStorageService extends Ember.Service {
+    async set(key, value) {
+      return new Promise((resolve, reject) => {
+        chrome.storage.local.set({
+          key: value
+        }, function () {
+          resolve();
+        });
+      });
+    }
+
+    async get(key) {
+      return new Promise((resolve, reject) => {
+        chrome.storage.local.get([key], function (result) {
+          resolve(result.key);
+        });
+      });
+    }
+
+  }
+
+  _exports.default = ChromeStorageService;
+});
+;define("chrome-extension/services/settings", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+
+  var _dec, _class, _descriptor, _temp;
+
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+
+  function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
+
+  const SETTINGS_KEY = "settings";
+  const DEFAULT_SETTINGS = {
+    foo: "bar"
+  };
+  let SettingsService = (_dec = Ember.inject.service, (_class = (_temp = class SettingsService extends Ember.Service {
+    constructor(...args) {
+      super(...args);
+
+      _initializerDefineProperty(this, "chromeStorage", _descriptor, this);
+    }
+
+    async store(settings) {
+      set(SETTINGS_KEY, settings);
+    }
+
+    async fetch() {
+      const settings = await this.chromeStorage.get(SETTINGS_KEY);
+      return { ...DEFAULT_SETTINGS,
+        ...settings
+      };
+    }
+
+  }, _temp), (_descriptor = _applyDecoratedDescriptor(_class.prototype, "chromeStorage", [_dec], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  })), _class));
+  _exports.default = SettingsService;
 });
 ;define("chrome-extension/services/store", ["exports", "ember-data/store"], function (_exports, _store) {
   "use strict";
@@ -94468,8 +94575,8 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "G7xyjsor",
-    "block": "{\"symbols\":[],\"statements\":[[10,\"h1\"],[12],[2,\"Here are options!\"],[13],[2,\"\\n\"],[1,[30,[36,1],[[30,[36,0],null,null]],null]]],\"hasEval\":false,\"upvars\":[\"-outlet\",\"component\"]}",
+    "id": "ggE3PyKw",
+    "block": "{\"symbols\":[],\"statements\":[[10,\"h1\"],[12],[2,\"Welcome to the Settings Page!\"],[13],[2,\"\\n\"],[10,\"p\"],[12],[2,\"Foo \"],[1,[32,0,[\"model\",\"settings\",\"foo\"]]],[13],[2,\"\\n\"],[10,\"h2\"],[12],[2,\"Question Filter Settings\"],[13],[2,\"\\n\"],[10,\"form\"],[12],[2,\"\\n    \"],[10,\"label\"],[14,\"for\",\"enabled\"],[12],[2,\"Enabled?\"],[13],[2,\"\\n    \"],[10,\"input\"],[14,1,\"enabled\"],[14,4,\"checkbox\"],[12],[13],[2,\"\\n\"],[13],[2,\"\\n\"],[1,[30,[36,1],[[30,[36,0],null,null]],null]]],\"hasEval\":false,\"upvars\":[\"-outlet\",\"component\"]}",
     "meta": {
       "moduleName": "chrome-extension/templates/options.hbs"
     }
@@ -94534,7 +94641,7 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
 ;define('chrome-extension/config/environment', [], function() {
   
           var exports = {
-            'default': {"modulePrefix":"chrome-extension","environment":"development","rootURL":"/","locationType":"auto","EmberENV":{"FEATURES":{},"EXTEND_PROTOTYPES":{"Date":false},"_APPLICATION_TEMPLATE_WRAPPER":false,"_DEFAULT_ASYNC_OBSERVERS":true,"_JQUERY_INTEGRATION":false,"_TEMPLATE_ONLY_GLIMMER_COMPONENTS":true},"APP":{"autoboot":false,"name":"chrome-extension","version":"0.0.0+0062e771"},"ember-cli-post-build-copy":{"replace":true,"development":[["/assets/app.js","chrome/assets/app.js"],["/assets/app.css","chrome/assets/app.css"]]},"exportApplicationGlobal":true}
+            'default': {"modulePrefix":"chrome-extension","environment":"development","rootURL":"/","locationType":"auto","EmberENV":{"FEATURES":{},"EXTEND_PROTOTYPES":{"Date":false},"_APPLICATION_TEMPLATE_WRAPPER":false,"_DEFAULT_ASYNC_OBSERVERS":true,"_JQUERY_INTEGRATION":false,"_TEMPLATE_ONLY_GLIMMER_COMPONENTS":true},"APP":{"autoboot":false,"name":"chrome-extension","version":"0.0.0+16f6a9a8"},"ember-cli-post-build-copy":{"replace":true,"development":[["/assets/app.js","chrome/assets/app.js"],["/assets/app.css","chrome/assets/app.css"]]},"exportApplicationGlobal":true}
           };
           Object.defineProperty(exports, '__esModule', {value: true});
           return exports;
@@ -94543,7 +94650,7 @@ module.exports = __webpack_require__(/*! /private/var/folders/j2/6kcvl_9j569_l1d
 
 ;
           if (!runningTests) {
-            require("chrome-extension/app")["default"].create({"autoboot":false,"name":"chrome-extension","version":"0.0.0+0062e771"});
+            require("chrome-extension/app")["default"].create({"autoboot":false,"name":"chrome-extension","version":"0.0.0+16f6a9a8"});
           }
         
 //# sourceMappingURL=app.map
