@@ -7,6 +7,12 @@
   "background": {
     "scripts": ["hot-reload.js"]
   },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["assets/app.js", "content.js"]
+    }
+  ],
   "options_page": "options.html",
   "icons": {
     "16": "assets/favicon-16.png",
