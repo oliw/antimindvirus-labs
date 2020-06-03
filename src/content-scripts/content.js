@@ -1,9 +1,14 @@
+import {fetchSettings} from "common/settings";
+
 /*
  * Global
  */
 
-export function filterSite() {
-  hideQuestions();
+export async function filterSite() {
+  const settings = await fetchSettings("hideQuestions");
+  if (settings.features.questionsBlurring.enabled) {
+    hideQuestions();
+  }
 }
 
 /*

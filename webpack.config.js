@@ -2,6 +2,7 @@ const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtensionReloader = require("webpack-extension-reloader");
+const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 module.exports = {
   context: __dirname,
@@ -15,6 +16,9 @@ module.exports = {
     filename: "[name].js",
   },
   mode: "development",
+  resolve: {
+    modules: [path.resolve(__dirname, "./src"), "node_modules"],
+  },
   module: {
     rules: [
       {
@@ -22,9 +26,14 @@ module.exports = {
         exclude: /node_modules/,
         loader: "babel-loader",
       },
+      {
+        test: /\.vue$/,
+        loader: "vue-loader",
+      },
     ],
   },
   plugins: [
+    new VueLoaderPlugin(),
     new CopyPlugin({
       patterns: [
         {from: "./src/manifest.json", to: "./manifest.json"},
