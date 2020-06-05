@@ -10,6 +10,7 @@ module.exports = {
     "content-script": "./src/content-scripts/index.js",
     options: "./src/options/index.js",
     background: "./src/background/index.js",
+    popup: "./src/popup/index.js",
   },
   output: {
     path: path.join(__dirname, "build"),
@@ -44,6 +45,11 @@ module.exports = {
       template: "./src/options/template.html",
       chunks: ["options"],
       filename: "options.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/popup/template.html",
+      chunks: ["popup"],
+      filename: "popup.html",
     }),
     new ExtensionReloader({
       manifest: path.resolve(__dirname, "src/manifest.json"),

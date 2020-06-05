@@ -5,7 +5,10 @@ import {fetchSettings} from "common/settings";
  */
 
 export async function filterSite() {
-  const settings = await fetchSettings("hideQuestions");
+  const settings = await fetchSettings();
+  if (settings.allDisabled) {
+    return;
+  }
   if (settings.features.questionsBlurring.enabled) {
     hideQuestions();
   }

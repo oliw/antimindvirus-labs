@@ -1,4 +1,5 @@
 const DEFAULT_SETTINGS = {
+  allDisabled: false,
   features: {
     questionsBlurring: {
       enabled: false,
@@ -9,6 +10,7 @@ const DEFAULT_SETTINGS = {
 const SETTINGS_KEY = "settings";
 
 function isFeatureEnabled(feature) {
+  const settings = fetchSettings();
   return false;
 }
 
