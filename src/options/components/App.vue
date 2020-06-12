@@ -7,7 +7,14 @@
       <input
         id="enabled"
         type="checkbox"
-        v-model="settings.features.questionsBlurring.enabled"
+        v-model="settings.questionsBlurring.enabled"
+      />
+      <h2>Entry Takeover</h2>
+      <label for="enabled">Enabled?</label>
+      <input
+        id="enabled"
+        type="checkbox"
+        v-model="settings.entryTakeover.enabled"
       />
       <input type="submit" value="Submit" />
     </form>

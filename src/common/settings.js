@@ -1,9 +1,10 @@
 const DEFAULT_SETTINGS = {
   allDisabled: false,
-  features: {
-    questionsBlurring: {
-      enabled: false,
-    },
+  questionsBlurring: {
+    enabled: false,
+  },
+  entryTakeover: {
+    enabled: false,
   },
 };
 
