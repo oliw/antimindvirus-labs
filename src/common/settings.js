@@ -6,6 +6,10 @@ const DEFAULT_SETTINGS = {
   entryTakeover: {
     enabled: false,
   },
+  greyscale: {
+    enabled: false,
+  },
+  badSites: ["theguardian.com"],
 };
 
 const SETTINGS_KEY = "settings";

@@ -17,6 +17,10 @@ export async function filterSite() {
   if (settings.entryTakeover.enabled) {
     showTakeover();
   }
+
+  if (settings.greyscale.enabled) {
+    makeGreyscale(settings);
+  }
 }
 
 function hideLinks() {
@@ -43,6 +47,21 @@ function showTakeover() {
       return h(App);
     },
   });
+}
+
+/*
+ * Greyscaler
+ */
+function makeGreyscale(settings) {
+  const url = location.href;
+  const badSites = settings.badSites;
+  const shouldApply = badSites.some((site) => {
+    return url.includes(site);
+  });
+  if (!shouldApply) {
+    return;
+  }
+  document.body.style.filter = "grayscale(1)";
 }
 
 /*
