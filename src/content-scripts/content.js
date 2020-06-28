@@ -15,7 +15,7 @@ export async function filterSite() {
     hideQuestions();
   }
   if (settings.entryTakeover.enabled) {
-    showTakeover();
+    showTakeover(settings);
   }
 
   if (settings.greyscale.enabled) {
@@ -34,8 +34,13 @@ function hideLinks() {
  * Takeover
  */
 
-function showTakeover() {
-  if (!(location.href == "https://news.ycombinator.com/")) {
+function showTakeover(settings) {
+  const url = location.href;
+  const badSites = settings.badSites;
+  const shouldApply = badSites.some((site) => {
+    return url.includes(site);
+  });
+  if (!shouldApply) {
     return;
   }
   const div = document.createElement("div");
